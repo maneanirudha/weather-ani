@@ -2,7 +2,7 @@
 const request = require('request')
 
 const location = (address, callback) => {
-    const url = 'http://api.weatherapi.com/v1/current.json?key=d3cc2b169c3e4bdf93d60535201710&q='+address
+    const url = 'https://api.weatherapi.com/v1/current.json?key=d3cc2b169c3e4bdf93d60535201710&q='+address
 
     request({ url, json: true }, (error, {body}) => {
         if (error) {
