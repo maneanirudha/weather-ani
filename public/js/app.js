@@ -21,8 +21,7 @@ formin.addEventListener('submit',(event)=>{
         }else{
             messageone.textContent = data.location.name
             messagetwo.textContent = data.current.temp_c
-            // console.log(data.location.name)
-            // console.log(data.current.temp_c)
+            
         }
     })
 })
