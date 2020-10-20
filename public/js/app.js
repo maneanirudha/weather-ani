@@ -14,7 +14,7 @@ const messagetwo = document.querySelector('#message2')
 formin.addEventListener('submit',(event)=>{
     event.preventDefault()
     const loc = search.value
-    fetch('http://api.weatherapi.com/v1/current.json?key=d3cc2b169c3e4bdf93d60535201710&q='+loc).then((response)=>{
+    fetch('https://api.weatherapi.com/v1/current.json?key=d3cc2b169c3e4bdf93d60535201710&q='+loc).then((response)=>{
     response.json().then((data)=>{
         if(data.error){
             messageone.textContent = data.error.message
