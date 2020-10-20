@@ -16,7 +16,7 @@ formin.addEventListener('submit',(event)=>{
         if(data.error){
             messageone.textContent = data.error.message
         }else{
-            messageone.textContent = data.location.name
+            messageone.textContent = data.location.name+','+data.location.region+','+data.location.country
             messagetwo.textContent = 'Tempurature Is: '+data.current.temp_c+'C'
             message3.textContent = 'Current Local Date/Time is '+data.location.localtime
             message4.textContent = 'Current Weather Is: '+data.current.condition.text
