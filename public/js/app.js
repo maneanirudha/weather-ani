@@ -1,14 +1,11 @@
 
 
-
-
-
 const formin = document.querySelector('form')
 const search  = document.querySelector('input')
 const messageone = document.querySelector('#message1')
 const messagetwo = document.querySelector('#message2')
-
-
+const message3 = document.querySelector('#message3')
+const message4 = document.querySelector('#message4')
 
 
 formin.addEventListener('submit',(event)=>{
@@ -20,7 +17,9 @@ formin.addEventListener('submit',(event)=>{
             messageone.textContent = data.error.message
         }else{
             messageone.textContent = data.location.name
-            messagetwo.textContent = data.current.temp_c
+            messagetwo.textContent = 'Tempurature Is: '+data.current.temp_c+'C'
+            message3.textContent = 'Current Local Date/Time is '+data.location.localtime
+            message4.textContent = 'Current Weather Is: '+data.current.condition.text
             
         }
     })

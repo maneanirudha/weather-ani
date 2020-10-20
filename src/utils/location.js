@@ -11,8 +11,10 @@ const location = (address, callback) => {
             callback('Unable to find location. Try another search.', undefined)
         } else {
             callback(undefined, {
+                ti : 'Local time is: ' +body.location.localtime,
                 location: body.location.name+','+body.location.region+','+body.location.country,
-                temp: 'Temp is: '+body.current.temp_c
+                temp: 'Temp is: '+body.current.temp_c,
+                condition : 'Recent Weather is:' +body.current.condition.text
             })
         }
     })

@@ -2,6 +2,7 @@ const path = require('path')
 const express = require('express')
 const hbs = require('hbs')
 const location = require('./utils/location')
+const { time } = require('console')
 
 const app = express()
 const port = process.env.PORT || 3000
@@ -51,8 +52,10 @@ app.get('/weather', (req, res) => {
             return res.send({error})
         }
         res.send({
+            ti : ti,
             location : location,
-            temp: temp
+            temp: temp,
+            condition : condition
         })
     })
 
