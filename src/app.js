@@ -4,7 +4,7 @@ const hbs = require('hbs')
 const location = require('./utils/location')
 
 const app = express()
-const app = process.env.PORT || 3000
+const port = process.env.PORT || 3000
 
 // Define paths for Express config
 const publicDirectoryPath = path.join(__dirname, '../public')
